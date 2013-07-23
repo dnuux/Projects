@@ -1,9 +1,5 @@
-Martyr2’s Mega Project List
+Project List
 ========
-
-Trying to complete all projects from [Martyr2’s Mega Project List](http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/).
-
-==============================
 
 Numbers
 ---------
@@ -61,7 +57,7 @@ Text
 
 **CD Key Generator** – Generates a unique key for your applications to use based on some arbitrary algorithm that you can specify. Great for software developers looking to make shareware that can be activated.
 
-**Regex Query Tool** – A tool that allows the user to enter a text string and then enter a regex pattern. It will run the regular exp****ression against the source text and return any matches or flag errors in the regular exp****ression.
+**Regex Query Tool** – A tool that allows the user to enter a text string and then enter a regex pattern. It will run the regular expression against the source text and return any matches or flag errors in the regular expression.
 
 Networking
 ---------
@@ -84,7 +80,7 @@ Networking
 
 **Site Checker with Time Scheduling** – An application that attempts to connect to a website or server every so many minutes or a given time and check if it is up. If it is down, it will notify you by email or by posting a notice on screen.
 
-**Small Web Server** – A simple web server that can serve HTML files that contain Javascript and other forms of non-code executing code. Added complexity would be to try and implement streaming video, create a server-side language, or serve up other stream types.
+**Small Web Server** – A simple web server that can serve HTML files. Make it multi-threaded with several different scheduling policies (FIFO, HPSC, HPDC, SFF). See [this assignment](http://pages.cs.wisc.edu/~dusseau/Classes/CS537-F04/Projects/P2/) for details.
 
 Classes
 ---------
@@ -179,3 +175,12 @@ Graphics and Multimedia
 **Screen Capture Program** – Make a utility that will simply capture a frame from your web cam. For added complexity see if you can also build in emailing functionality.
 
 **MP3 to Wav Converter** – MP3 is essentially compressed wav format. See if you can translate it back into wav so that some other sound editing programs can work with the wav file itself. Keep in mind that 1 MB of MP3 is relative 10MB wav.
+
+System
+---------
+
+**Memory allocator** - Implement your own malloc, calloc, realloc and free functions.
+
+**File System** - A simple and slow file system. See [this assignment](http://pages.cs.wisc.edu/~dusseau/Classes/CS537-F04/Projects/P4/) for details.
+
+**Shell** - Implement a command line interpreter or shell. The shell should operate in this basic way: when you type in a command (in response to its prompt), the shell creates a child process that executes the command you entered and then prompts for more user input when it has finished. See [this assignment](http://pages.cs.wisc.edu/~dusseau/Classes/CS537-F04/Projects/P1/) for details.
