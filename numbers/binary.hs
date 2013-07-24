@@ -18,8 +18,8 @@ main :: IO ()
 main = do
   args <- getArgs
   if head args == "bin" then
-    mapM_ (putStrLn . map decimalToBinary) (tail args)
+    mapM_ (putStrLn . decimalToBinary) (tail args)
   else if head args == "dec" then
-    mapM_ (putStrLn . map binaryToDecimal) (tail args)
+    mapM_ (putStrLn . binaryToDecimal) (tail args)
   else
     putStrLn "Usage: ./binary bin/dec n"
