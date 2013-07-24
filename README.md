@@ -10,11 +10,9 @@ Numbers
 
 [**Prime Factorization**](https://github.com/dnuux/projects/blob/master/numbers/factors.hs) – Have the user enter a number and find all Prime Factors (if there are any) and display them.
 
-**Next Prime Number** – Have the program find prime numbers until the user chooses to stop asking for the next one.
+[**Next Prime Number**](https://github.com/dnuux/projects/blob/master/numbers/primes.hs) – Have the program find prime numbers until the user chooses to stop asking for the next one.
 
-**Change Return Program** – The user enters a cost and then the amount of money given. The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change.
-
-**Binary to Decimal and Back Converter** – Develop a converter to convert a decimal number to binary or a binary number to its decimal equivalent.
+[**Binary to Decimal and Back Converter**](https://github.com/dnuux/projects/blob/master/numbers/binary.hs) – Develop a converter to convert a decimal number to binary or a binary number to its decimal equivalent.
 
 **Calculator** – A simple calculator to do basic operators. Make it a scientific calculator for added complexity.
 
