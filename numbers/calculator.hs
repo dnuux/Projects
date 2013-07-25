@@ -4,8 +4,8 @@
 
 import Data.Char
 import Data.List
-import Data.Function (on)
 import Data.Fixed (mod')
+import Data.Function (on)
 import Data.Maybe (fromJust)
 import Control.Monad (liftM2)
 
@@ -28,16 +28,16 @@ toRPN (token:tokens) stack
   | isDigit x    = token ++ " " ++ toRPN tokens stack
   | isLetter x   = toRPN tokens (token : stack)
   | isOperator x = unwords preOps ++ space preOps ++ toRPN tokens (token : rest)
-    where x = head token
+    where x                  = head token
           space lst          = if null lst then "" else " "
           (funToken, stack') = if not (null rest'') && isLetter ((head . head) rest'') then
                                (head rest'', tail rest'') else ("", rest'')
           (preOps, rest)     = span (liftM2 (&&) (isOperator . head) higherPrecedence) stack
           (preOps', rest')   = span (isOperator . head) stack
-          rest''             = tail rest'
           leftAssociative y  = y /= "^" && y /= "!"
           higherPrecedence y = (leftAssociative token && precedence token == precedence y)
                              || (precedence token < precedence y)
+          rest''             = tail rest'
 
 evalRPN :: String -> Float
 evalRPN = head . foldl f [] . words
