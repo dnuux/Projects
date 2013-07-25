@@ -12,6 +12,9 @@ import Control.Monad (liftM2)
 isOperator :: Char -> Bool
 isOperator = flip elem "+-/*^%!"
 
+leftAssociative :: Char -> Bool
+leftAssociative = liftM2 (&&) (/= '^') (/= '!')
+
 precedence :: String -> Int
 precedence op = snd . fromJust $ find ((op ==) . fst) precedences
   where precedences = [("+", 0), ("-", 0), ("%", 1), ("*", 2), ("/", 2), ("^", 3), ("!", 4)]
@@ -34,8 +37,7 @@ toRPN (token:tokens) stack
                                (head rest'', tail rest'') else ("", rest'')
           (preOps, rest)     = span (liftM2 (&&) (isOperator . head) higherPrecedence) stack
           (preOps', rest')   = span (isOperator . head) stack
-          leftAssociative y  = y /= "^" && y /= "!"
-          higherPrecedence y = (leftAssociative token && precedence token == precedence y)
+          higherPrecedence y = (leftAssociative x && precedence token == precedence y)
                                || (precedence token < precedence y)
           rest''             = tail rest'
 
