@@ -36,7 +36,7 @@ toRPN (token:tokens) stack
           (preOps', rest')   = span (isOperator . head) stack
           leftAssociative y  = y /= "^" && y /= "!"
           higherPrecedence y = (leftAssociative token && precedence token == precedence y)
-                             || (precedence token < precedence y)
+                               || (precedence token < precedence y)
           rest''             = tail rest'
 
 evalRPN :: String -> Float
